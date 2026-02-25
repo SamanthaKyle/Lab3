@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <!-- https://stackoverflow.com/questions/50262517/bootstrap-4-row-fill-remaining-height -->
+        <div class="row justify-content-center h-30 bg-blue">
+                <h1 class = 'display-1'>Map Title</h1>
+                <p>Map Description</p>
+
+        </div>
+        <div class="row justify-content-center h-100">
+            <div class="col-4">
+                <div class="h-100 d-flex flex-column">
+                    <div class="row justify-content-center bg-purple">
+                        <div class="text-white">
+                            <div style="height:150px">ROW 1 - fixed height</div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center bg-blue flex-grow-1">
+                        <div class="text-white">ROW 2 - grow remaining height</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 bg-gray">
+                <div id = 'my-map' class = 'map-container'></div>
+                <script src = 'script.js'></script>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    </div>
+</body>
+
+</html>
