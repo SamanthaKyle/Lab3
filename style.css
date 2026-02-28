@@ -20,8 +20,9 @@ body {
 }
 
 .map-container {
-    /* position: absolute; */
-    top: 0;
-    bottom: 0;
+    /* FIX POSITIONING */
+    position: absolute;
+    top: 24%;
+    bottom: 0%;
     width: 100%;
 }
