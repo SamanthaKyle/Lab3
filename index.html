@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab 3 - Samantha Kyle</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js'></script>
@@ -20,31 +20,80 @@
     <div class="container-fluid h-100">
         <!-- https://stackoverflow.com/questions/50262517/bootstrap-4-row-fill-remaining-height -->
         <div class="row justify-content-center h-30 bg-blue">
-                <h1 class = 'display-1'>Map Title</h1>
-                <p>Map Description</p>
+            <h1 class='display-1'>Keeping Cool in Toronto - Explore the Heat Relief Network</h1>
 
         </div>
         <div class="row justify-content-center h-100">
             <div class="col-4">
                 <div class="h-100 d-flex flex-column">
-                    <div class="row justify-content-center bg-purple">
-                        <div class="text-white">
-                            <div style="height:150px">ROW 1 - fixed height</div>
+                    <div class="row justify-content-center bg-blue">
+                        <div class="text-black">
+                            <!-- <div style="height:150px">ROW 1 - fixed height</div> -->
+                            <div>
+                                <br>
+                                <h1>About Toronto’s Heat Relief Strategy</h1>
+                                <p>Environment & Climate Change Canada issues Heat Warnings across Canada. A Heat
+                                    Warning is issued for southern Ontario
+                                    (including Toronto) when there is a forecast of two or more consecutive days with
+                                    daytime maximum temperatures of 31°C
+                                    or warmer, together with nighttime minimum temperatures of 20°C or warmer or when
+                                    there is a forecast of two or more
+                                    consecutive days with humidex values expected to reach 40 or higher.</p>
+
+                                <h1>Be Notified of Heat Warnings</h1>
+                                <p>Check Environment & Climate Change Canada website for information on your local
+                                    forecast (opens in new window) and
+                                    weather alerts (opens in new window) or download their mobile app, WeatherCAN (opens
+                                    in new window), which provides
+                                    weather alert notifications in your area, as well as in your saved locations.</p>
+
+                                <h1>Heat Relief Strategy</h1>
+                                <p>The City of Toronto’s Heat Relief Strategy is a protocol for hot weather response
+                                    that aims to reduce the incidence of
+                                    heat-related illness and death in Toronto due to extreme heat. The main focus of the
+                                    strategy is to provide education
+                                    and services to vulnerable groups at increased risk for heat-related illnesses. Read
+                                    the current Heat Relief Strategy
+                                    PDF.</p>
+
+                                <h1>Heat Relief Network</h1>
+                                <p>Toronto’s Heat Relief Network maximizes the use of existing air-conditioned and other
+                                    cool spaces on hot days. The
+                                    City’s Heat Relief Network features cool spaces that are open throughout the summer,
+                                    including on days when Heat
+                                    Warnings are issued by Environment and Climate Change Canada. The Heat Relief
+                                    Network includes libraries, community
+                                    centres, and several private and non-profit organizations including some senior
+                                    centres, shopping malls and YMCA
+                                    locations.</p>
+
+                                <p>The City’s Streets to Homes outreach team does wellness checks for clients who live
+                                    outdoors, and can support in
+                                    determining the closest cool space.</p>
+                            </div>
+
                         </div>
                     </div>
                     <div class="row justify-content-center bg-blue flex-grow-1">
-                        <div class="text-white">ROW 2 - grow remaining height</div>
+                        <br>
+                        <div id='legend' class='legend'>
+                            <h4>Number of Heat Relief Network Sites</h4>
+                        </div>
+                        
+                            <h4> Hover around the map to see how many sites each ward has. <br>
+                            Click on a point to learn more about the site!</h4>
+                        
                     </div>
                 </div>
             </div>
             <div class="col-8 bg-gray">
-                <div id = 'my-map' class = 'map-container'></div>
-                <script src = 'script.js'></script>
+                <div id='my-map' class='map-container'></div>
+                <script src='script.js'></script>
             </div>
-    
+
         </div>
     </div>
-    
+
 
     </div>
 </body>

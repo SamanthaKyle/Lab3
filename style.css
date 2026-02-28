@@ -8,11 +8,12 @@ body {
 }
 
 .bg-gray {
-    background: rgb(74, 74, 74);
+    background: rgb(167, 218, 250);
 }
 
 .bg-blue {
-    background: rgb(50, 101, 196);
+    /* background: rgb(105, 194, 214); */
+    background: rgb(167, 218, 250);
 }
 
 .bg-red {
@@ -22,7 +23,39 @@ body {
 .map-container {
     /* FIX POSITIONING */
     position: absolute;
-    top: 24%;
+    top: 12%;
     bottom: 0%;
     width: 100%;
+}
+
+.legend {
+    /* position: inherit; */
+    position: relative;
+    background-color: aliceblue;
+    bottom: 10;
+    right: 10;
+    margin: 0 10px 30x 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+    max-width: 80%; 
+    max-height: 40%;
+}
+
+.legend span {
+    /* display: inline-block; */
+    display: inline-flexbox;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.legend-colcircle {
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    background-color: var(--legendcolour);
 }
