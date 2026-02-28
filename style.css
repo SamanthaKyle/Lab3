@@ -3,10 +3,6 @@ body {
     height: 100%;
 }
 
-.bg-purple {
-    background: rgb(48, 0, 50);
-}
-
 .bg-gray {
     background: rgb(167, 218, 250);
 }
@@ -14,10 +10,6 @@ body {
 .bg-blue {
     /* background: rgb(105, 194, 214); */
     background: rgb(167, 218, 250);
-}
-
-.bg-red {
-    background: rgb(196, 50, 53);
 }
 
 .map-container {
@@ -38,7 +30,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px gray;
-    max-width: 80%; 
+    max-width: 80%;
     max-height: 40%;
 }
 

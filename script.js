@@ -31,6 +31,7 @@ legenditems.forEach(({ label, colour }) => {
 })
 
 map.on('load', () => {
+    alert('Here is how to use the map!\nHover and check the legend to see the number of heat relief sites per ward.\nClick on the site points to learn more')
     map.addSource('wards-data', {
         type: 'geojson',
         data: 'https://raw.githubusercontent.com/SamanthaKyle/Lab3/refs/heads/main/climate_change_data/wards_final.geojson'
@@ -94,6 +95,10 @@ map.on('load', () => {
     });
 });
 
+// addEventListener("mouseenter", (e) => {
+//     alert('Here is how to use the map')
+// })
+
 
 map.on('mouseenter', 'wards-fill', () => {
     map.getCanvas().style.cursor = 'pointer'; // Switch cursor to pointer when mouse is over provterr-fill layer
@@ -115,6 +120,6 @@ map.on('click', 'heat-points', (e) => {
     new mapboxgl.Popup() // Declare new popup object on each click
         .setLngLat(e.lngLat) // Use method to set coordinates of popup based on mouse click location
         .setHTML("<b>Location</b> " + e.features[0].properties.locationName + "<br>" +
-        "Address: " + e.features[0].properties.address + "<br>Feature: " + e.features[0].properties.locationDesc) // Use click event properties to write text for popup
+            "Address: " + e.features[0].properties.address + "<br>Feature: " + e.features[0].properties.locationDesc) // Use click event properties to write text for popup
         .addTo(map); // Show popup on map
 }); 
