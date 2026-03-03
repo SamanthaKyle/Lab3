@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 3 - Samantha Kyle</title>
+    <!-- Link to bootstrap since I use some of their styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Link to mapbox-gl-js to be able to use mapbox map and expressions -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- allows for bootstrap styling to be overwritten in my own file when needed -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -18,20 +23,22 @@
 
 <body>
     <div class="container-fluid h-100">
-        <!-- https://stackoverflow.com/questions/50262517/bootstrap-4-row-fill-remaining-height -->
+        <!-- consulted this resource to help understand bootstrap sizing
+         https://stackoverflow.com/questions/50262517/bootstrap-4-row-fill-remaining-height -->
         <div class="row justify-content-center h-30 bg-blue">
-            <h1 class='display-1'>Keeping Cool in Toronto - Explore the Heat Relief Network</h1>
+            <h1 class='display-2'>Keeping Cool in Toronto - Explore the Heat Relief Network</h1>
 
         </div>
-        <div class="row justify-content-center h-100">
+        <div class="row h-100">
             <div class="col-4">
                 <div class="h-100 d-flex flex-column">
                     <div class="row justify-content-center bg-blue">
                         <div class="text-black">
-                            <!-- <div style="height:150px">ROW 1 - fixed height</div> -->
                             <div>
                                 <br>
-                                <h1>About Toronto’s Heat Relief Strategy</h1>
+                                <!-- Text is taken from city website here:
+                                 https://www.toronto.ca/community-people/health-wellness-care/health-programs-advice/hot-weather/about-torontos-heat-relief-strategy/-->
+                                <h3>About Toronto’s Heat Relief Strategy</h3>
                                 <p>Environment & Climate Change Canada issues Heat Warnings across Canada. A Heat
                                     Warning is issued for southern Ontario
                                     (including Toronto) when there is a forecast of two or more consecutive days with
@@ -40,14 +47,7 @@
                                     there is a forecast of two or more
                                     consecutive days with humidex values expected to reach 40 or higher.</p>
 
-                                <h1>Be Notified of Heat Warnings</h1>
-                                <p>Check Environment & Climate Change Canada website for information on your local
-                                    forecast (opens in new window) and
-                                    weather alerts (opens in new window) or download their mobile app, WeatherCAN (opens
-                                    in new window), which provides
-                                    weather alert notifications in your area, as well as in your saved locations.</p>
-
-                                <h1>Heat Relief Strategy</h1>
+                                <h3>Heat Relief Strategy</h3>
                                 <p>The City of Toronto’s Heat Relief Strategy is a protocol for hot weather response
                                     that aims to reduce the incidence of
                                     heat-related illness and death in Toronto due to extreme heat. The main focus of the
@@ -56,7 +56,7 @@
                                     the current Heat Relief Strategy
                                     PDF.</p>
 
-                                <h1>Heat Relief Network</h1>
+                                <h3>Heat Relief Network</h3>
                                 <p>Toronto’s Heat Relief Network maximizes the use of existing air-conditioned and other
                                     cool spaces on hot days. The
                                     City’s Heat Relief Network features cool spaces that are open throughout the summer,
@@ -76,6 +76,7 @@
                     </div>
                     <div class="row justify-content-center bg-blue flex-grow-1">
                         <br>
+                        <!-- legend item that has custom styling in style.css and creation in script.js-->
                         <div id='legend' class='legend'>
                             <h4>Number of Heat Relief Network Sites</h4>
                         </div>
@@ -83,7 +84,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8 bg-gray">
+            <div class="col-8 bg-blue">
+                <!-- where the map goes! -->
                 <div id='my-map' class='map-container'></div>
                 <script src='script.js'></script>
             </div>
