@@ -63,7 +63,7 @@ map.on('load', () => {
                     15, "#fc4e2a",
                     20, "hsl(348, 100%, 37%)",],
             'fill-outline-color': 'orange',
-            'fill-opacity': 0.75
+            'fill-opacity': 0.7
 
         }
     });
@@ -139,14 +139,14 @@ map.on('mouseenter', 'wards-fill', () => {
 });
 // as mouse moves over a ward, change the filter to fetch this feature's name and highlight it with the highlight layer
 map.on('mousemove', 'wards-fill', (e) => {
-    map.setFilter('wards-hl', ['==', ['get', 'AREA_NAME'], e.features[0].properties.AREA_NAME]);
+    map.setFilter('wards-hl', ['!=', ['get', 'AREA_NAME'], e.features[0].properties.AREA_NAME]);
 
 });
 
 // reset the filter when mouse leaves
 map.on('mouseleave', 'wards-fill', () => {
     map.getCanvas().style.cursor = ''; // Switch cursor back when mouse leaves provterr-fill layer
-    map.setFilter("wards-hl", ['==', ['get', 'AREA_NAME'], '']); // Reset filter for highlighted layer after mouse leaves feature
+    map.setFilter("wards-hl", ['!=', ['get', 'AREA_NAME'], '']); // Reset filter for highlighted layer after mouse leaves feature
 });
 
 // clicking on a heat point will show more information in a popup
