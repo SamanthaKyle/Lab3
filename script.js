@@ -63,6 +63,7 @@ map.on('load', () => {
                     15, "#fc4e2a",
                     20, "hsl(348, 100%, 37%)",],
             'fill-outline-color': 'orange',
+            // default imagery is non-opaque so they can see details, but this is seen only when hovering
             'fill-opacity': 0.7
 
         }
@@ -84,6 +85,7 @@ map.on('load', () => {
                     20, "hsl(348, 100%, 37%)",],
             'fill-outline-color': 'white',
             'fill-outline-width': 2,
+            // highlighted layers will get full opacity
             'fill-opacity': 1,
             // default setting so it filters out everything until first prompted
             'filter': ['==', ['get', 'AREA_NAME'], '']
@@ -137,7 +139,7 @@ map.on('mouseenter', 'wards-fill', () => {
     map.getCanvas().style.cursor = 'pointer'; // Switch cursor to pointer when mouse is over provterr-fill layer
 
 });
-// as mouse moves over a ward, change the filter to fetch this feature's name and highlight it with the highlight layer
+// as mouse moves over a ward, change the filter to fetch this feature's name and highlight all OTHER LAYERS with the highlight layer
 map.on('mousemove', 'wards-fill', (e) => {
     map.setFilter('wards-hl', ['!=', ['get', 'AREA_NAME'], e.features[0].properties.AREA_NAME]);
 
