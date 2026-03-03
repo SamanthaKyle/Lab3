@@ -1,5 +1,8 @@
 # GGR472 Lab 3 - Map Interactivity and Controls
 
+Created an interactive map of Toronto showing the existing Toronto Heat Relief network, using points to represent relief sites and showing wards coloured according to number of sites.
+Created using Bootstrap and Mapbox.
+
 ## Layer with data/symbology classified:
 Ward layer fill colour is based on number of heat relief sites per ward
 
